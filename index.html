@@ -7,12 +7,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
       font-family: 'Orbitron', sans-serif;
       background: #0a0a0a;
@@ -22,21 +17,18 @@
       flex-direction: column;
       min-height: 100vh;
     }
-
     header {
       background: linear-gradient(90deg, #111, #400);
       padding: 1rem;
       text-align: center;
       border-bottom: 2px solid #900;
     }
-
     header h1 {
       font-size: 1.8rem;
       letter-spacing: 2px;
       color: #f00;
       text-shadow: 0 0 8px #900;
     }
-
     nav {
       display: flex;
       justify-content: center;
@@ -44,7 +36,6 @@
       gap: 1rem;
       margin: 1rem 0;
     }
-
     nav a {
       padding: 0.5rem 1rem;
       border: 1px solid #900;
@@ -54,21 +45,18 @@
       border-radius: 8px;
       background: rgba(20, 0, 0, 0.7);
     }
-
     nav a:hover {
       background: #900;
       color: #fff;
       box-shadow: 0 0 12px #f00, 0 0 24px #600 inset;
       transform: scale(1.05);
     }
-
     main {
       flex: 1;
       padding: 1rem;
       max-width: 1000px;
       margin: auto;
     }
-
     section {
       margin-bottom: 2rem;
       padding: 1rem;
@@ -77,17 +65,11 @@
       border-radius: 12px;
       transition: transform 0.3s ease;
     }
-
     section:hover {
       transform: translateY(-4px);
       box-shadow: 0 0 16px rgba(255,0,0,0.5);
     }
-
-    h2 {
-      color: #f00;
-      margin-bottom: 1rem;
-    }
-
+    h2 { color: #f00; margin-bottom: 1rem; }
     pre {
       background: #000;
       padding: 0.8rem;
@@ -95,11 +77,7 @@
       overflow-x: auto;
       border: 1px solid #600;
     }
-
-    code {
-      color: #0f0;
-    }
-
+    code { color: #0f0; }
     footer {
       text-align: center;
       padding: 1rem;
@@ -107,35 +85,27 @@
       font-size: 0.9rem;
       border-top: 2px solid #900;
     }
-
-    /* Адаптивность */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.3rem;
-      }
-      nav a {
-        padding: 0.4rem 0.8rem;
-      }
-      section {
-        padding: 0.8rem;
-      }
+      header h1 { font-size: 1.3rem; }
+      nav a { padding: 0.4rem 0.8rem; }
+      section { padding: 0.8rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Hitman 2: Silent Assassin — Читы</h1>
+    <h1 id="title">Hitman 2: Silent Assassin — Читы</h1>
     <nav>
-      <a href="#console">Консольные команды</a>
-      <a href="#ioi">IOI-коды</a>
-      <a href="#weapons">Оружие</a>
+      <a href="#console" id="nav-console">Консольные команды</a>
+      <a href="#ioi" id="nav-ioi">IOI-коды</a>
+      <a href="#weapons" id="nav-weapons">Оружие</a>
     </nav>
   </header>
 
   <main>
     <section id="console">
-      <h2>Консольные команды</h2>
-      <pre><code>god 1 / god 0 — бессмертие
+      <h2 id="console-title">Консольные команды</h2>
+      <pre><code id="console-codes">god 1 / god 0 — бессмертие
 invisible 1 / invisible 0 — невидимость
 infammo — бесконечные патроны
 giveall — всё оружие и предметы
@@ -150,8 +120,8 @@ ip_timemultiplier X — скорость игры</code></pre>
     </section>
 
     <section id="ioi">
-      <h2>IOI-коды</h2>
-      <pre><code>IOIRULEZ / IOIRULEY — бессмертие
+      <h2 id="ioi-title">IOI-коды</h2>
+      <pre><code id="ioi-codes">IOIRULEZ / IOIRULEY — бессмертие
 IOIGIVES — всё оружие
 IOIHITLEIF — здоровье
 IOIEQPWEAP — боезапас
@@ -164,8 +134,8 @@ IOIGRV — игра с гравитацией</code></pre>
     </section>
 
     <section id="weapons">
-      <h2>Названия оружия</h2>
-      <pre><code>give beretta
+      <h2 id="weapons-title">Названия оружия</h2>
+      <pre><code id="weapons-codes">give beretta
 give deagle
 give uzi
 give mp5
@@ -182,7 +152,55 @@ give explosives</code></pre>
   </main>
 
   <footer>
-    <p>© Hitman Cheats Guide — стиль 47</p>
+    <p id="footer-text">© Hitman Cheats Guide — стиль 47</p>
   </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Hitman 2: Silent Assassin — Cheat Codes",
+        navConsole: "Console Commands",
+        navIOI: "IOI Codes",
+        navWeapons: "Weapons",
+        consoleTitle: "Console Commands",
+        ioiTitle: "IOI Codes",
+        weaponsTitle: "Weapon Names",
+        footer: "© Hitman Cheats Guide — style 47"
+      },
+      uz: {
+        title: "Hitman 2: Silent Assassin — Kodlar",
+        navConsole: "Konsol buyruqlari",
+        navIOI: "IOI kodlari",
+        navWeapons: "Qurollar",
+        consoleTitle: "Konsol buyruqlari",
+        ioiTitle: "IOI kodlari",
+        weaponsTitle: "Qurol nomlari",
+        footer: "© Hitman Cheats Guide — 47 uslubi"
+      },
+      ru: {
+        title: "Hitman 2: Silent Assassin — Читы",
+        navConsole: "Консольные команды",
+        navIOI: "IOI-коды",
+        navWeapons: "Оружие",
+        consoleTitle: "Консольные команды",
+        ioiTitle: "IOI-коды",
+        weaponsTitle: "Названия оружия",
+        footer: "© Hitman Cheats Guide — стиль 47"
+      }
+    };
+
+    const lang = navigator.language.startsWith('uz') ? 'uz' :
+                 navigator.language.startsWith('en') ? 'en' : 'ru';
+
+    const t = translations[lang];
+    document.getElementById('title').textContent = t.title;
+    document.getElementById('nav-console').textContent = t.navConsole;
+    document.getElementById('nav-ioi').textContent = t.navIOI;
+    document.getElementById('nav-weapons').textContent = t.navWeapons;
+    document.getElementById('console-title').textContent = t.consoleTitle;
+    document.getElementById('ioi-title').textContent = t.ioiTitle;
+    document.getElementById('weapons-title').textContent = t.weaponsTitle;
+    document.getElementById('footer-text').textContent = t.footer;
+  </script>
 </body>
 </html>
